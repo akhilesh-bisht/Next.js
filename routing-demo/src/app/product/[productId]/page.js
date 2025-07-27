@@ -1,5 +1,3 @@
-import { log } from "console";
-
  async function  ProductDetails({params}) {
   const { productId } = params;
   console.log(params);
