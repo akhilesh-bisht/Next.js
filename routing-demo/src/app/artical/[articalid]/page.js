@@ -1,20 +1,20 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
+import { use } from 'react'
 
- async function page({params ,searchParams}) {
-    const{articalid} = await params()
-    const {lang = 'en'} = await searchParams()
+export default function ArticlePage({ params, searchParams }) {
+  const { articalid } = use(params)
+  const { lang = 'en' } = use(searchParams)
+
   return (
     <div>
-        <h1> news articals {articalid}</h1>
-        <p> reading in {lang}</p>
+      <h1>News article {articalid}</h1>
+      <p>Reading in {lang}</p>
 
-
-        <Link href='/artical/id?lang=en'>ENGLISH </Link>
-         <Link href='/artical/id?lang=es'>sapnish </Link>
-          <Link href='/artical/id?lang=fr'>French </Link>
+      <Link href={`/artical/${articalid}?lang=en`}>English</Link><br />
+      <Link href={`/artical/${articalid}?lang=es`}>Spanish</Link><br />
+      <Link href={`/artical/${articalid}?lang=fr`}>French</Link>
     </div>
   )
 }
-
-export default page
