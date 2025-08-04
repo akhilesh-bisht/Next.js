@@ -10,7 +10,7 @@ export default function ArticlePage({ params, searchParams }) {
   return (
     <div>
       <h1>News article {articalid}</h1>
-      <p>Reading in {lang}</p>
+      <p>Reading in this {lang}</p>
 
       <Link href={`/artical/${articalid}?lang=en`}>English</Link><br />
       <Link href={`/artical/${articalid}?lang=es`}>Spanish</Link><br />
