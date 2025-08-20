@@ -1,10 +1,12 @@
 "use client";
 
 import React from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 function AuthLayout({ children }) {
+  const [input , setInput] = useState("")
   const pathname = usePathname();
 
   const navlinks = [
@@ -25,6 +27,7 @@ function AuthLayout({ children }) {
   return (
     <>
       <h1 style={{ fontSize: '50px', backgroundColor: 'red' }}>Header</h1>
+      <input value={input} onChange={(e)=> setInput(e.target.value)}/>
       <nav>
         {navlinks.map((nav, index) => {
           const isActive = pathname === nav.href || (pathname.startsWith(nav.href) && nav.href !== '/');
