@@ -11,9 +11,9 @@ function orderPage() {
         
     }
   return (<>
-    <div>thsi is order page </div>
+    <div>this is order page </div>
 
-    <button onClick={handleClick}>buy this order</button>
+    <button onClick={handleClick}>purchase this order</button>
   </>
   )
 }
