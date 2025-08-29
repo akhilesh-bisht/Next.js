@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 function getRandome(count) {
     return Math.floor(Math.random() * count)
 }
-export default function ProductReview({ params }) {
-    const { productId, revieid } = params;
+export default async function ProductReview ({ params }) {
+    const { productId, revieid } =  await params;
 
     const random = getRandome(2)
 
