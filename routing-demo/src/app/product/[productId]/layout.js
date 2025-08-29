@@ -1,6 +1,15 @@
 import React from 'react';
 
 function Layout({ children }) {
+  function getRandome(count) {
+    return Math.floor(Math.random() * count)
+}
+ const random = getRandome(2)
+
+
+    if(random ===1){
+         throw new Error('error product how its work')
+    }
   return (
     <>
       <header>
